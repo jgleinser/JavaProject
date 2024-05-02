@@ -1,0 +1,40 @@
+import java.util.ArrayList;
+//class Name
+class Playlist {
+//
+  public static void main(String[] args) {
+
+    ArrayList<String> desertIslandPlaylist = new ArrayList<String>();
+    //add songs to playlist
+    desertIslandPlaylist.add("Teardrops on my Guitar");
+    desertIslandPlaylist.add("Our Song");
+    desertIslandPlaylist.add("Mean");
+    desertIslandPlaylist.add("Fortnight");
+    desertIslandPlaylist.add("Florida");
+    desertIslandPlaylist.add("Love Story");
+
+    //remove songs from playlist
+    desertIslandPlaylist.remove("Love Story");
+
+    //swap items in playlist
+    int indexA = desertIslandPlaylist.indexOf("Florida");
+    int indexB = desertIslandPlaylist.indexOf("Mean");
+
+    //Create new String Variable for songA
+
+    String tempA = "Florida";
+
+    //Call set to rewrite the song at the index previosuly defined - expectation: Song should display twice.
+
+    desertIslandPlaylist.set(indexA, "Mean");
+    desertIslandPlaylist.set(indexB, tempA);
+
+    //get number of items in array list
+    System.out.println(desertIslandPlaylist.size());
+
+    //print all songs in desert Island Playlist
+    System.out.println(desertIslandPlaylist);
+
+  }
+
+}
